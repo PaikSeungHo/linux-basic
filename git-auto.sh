@@ -1,14 +1,12 @@
 #!/bin/sh
-num1=30
-num2=$num1+100
-echo $num2
+git add .
 
-# expr 사용 시 공백 주의
-num3=$(expr $num1 + 150)
-echo $num3
+commitmsg=''
 
-# 곱셈 기호 앞에 역슬래시를 사용하여 이스케이프 처리
-num4=$(expr \( $num1 + 200 \) / 10 \* 2)
-echo $num4
+echo "커밋 메시지 입력 : "
+read commitmsg
+echo "commitmsg: $commitmsg"
 
-exit 0
+git commit -m "$commitmsg"
+#뛰어쓰기 때문에 "을 필수 사용하고 -m 옵션을 사용해서 한줄로 처리 하게끔 수정해야함
+git push origin main
