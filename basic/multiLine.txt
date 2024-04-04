@@ -1,6 +1,5 @@
-\n
-\n
-\n
-\n
-\n
-head -n 3 multiLine.txt
+Line 1
+Line 2
+Line 3
+ Line 4
+Line5
